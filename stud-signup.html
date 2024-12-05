@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>RECONNECT -Sign up / Login Form</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>RECONNECT</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  
+  <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    width: 75%;
+    top: 2%;
+    z-index: 1000; /* Ensure it is on top */
+}
+/* Style for the Home link */
+
+.nav1-link {
+    color: #ffffff; /* Initial color */
+    text-decoration: none; /* Removes underline */
+    font-size: 20px;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for Home link */
+.nav1-link:hover {
+    color: #ffc800; /* Hover color */
+    text-decoration: none; /* Ensures underline doesn't appear on hover */
+}
+/* Hover effect for the Home link */
+
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'montserrat', sans-serif;
+	background: url("./rec.png");
+}
+.main{
+	width: 350px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 20px;
+	box-shadow: 5px 20px 50px #000;
+}
+#chk{
+	display: none;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+label{
+	color: #fff;
+	font-size: 2.3rem;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+   
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #ffc800;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #ffc800;
+}
+.login{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+    font-family: "montserrat";
+}
+.login label{
+	color: #100c00;
+	transform: scale(.6);
+    top: 10px;
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+	transform: scale(0.6);	
+    color: #ba9202;
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
+
+.forgot-password a{
+	margin-left: 47px;
+	color: #3a3832;
+	text-decoration: none;
+	font-size: small;
+}
+
+.forgot-password a:hover{
+	text-decoration: underline;
+	color:#ffc800;
+}
+.popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    .popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .popup button {
+        padding: 10px 20px;
+        background-color: #ffc800;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .popup button:hover {
+        background-color: #ffb600;
+    }
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+	<link rel="stylesheet" type="text/css" href="slide navbar style.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+       <!-- Navbar -->
+       <nav class="navbar">
+        <div class="logo"><a class="navbar-brand" href="#page-top"><img src="./REC_onnect-removebg-preview.png" height="30" alt="..." /></a></div>
+        <ul class="nav-link">
+            <a class="nav1-link" href="/Pges/1.Home Page/Home.html">HOME</a>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        
+        <!-- Signup Form -->
+        <div class="signup">
+            <form id="signupForm" method="POST">
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" id="signupUsername" name="username" placeholder="User name" required="true">
+                <input type="email" id="signupEmail" name="email" placeholder="Email" required="true">
+                <input type="password" id="signupPassword" name="password" placeholder="Password" required="true">
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+        
+        <!-- Login Form -->
+        <div class="login">
+            <form id="loginForm" action="/login" method="POST">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" id="loginEmail" name="email" placeholder="Email" required="">
+                <input type="password" id="loginPassword" name="password" placeholder="Password" required="">
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        
+        <!-- Success Popup -->
+        <div id="successPopup" class="popup">
+            <div class="popup-content">
+                <h2>Sign Up Successful!</h2>
+                <p>Your account has been created successfully.</p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle Signup Form Submission
+        document.getElementById('signupForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const username = document.getElementById('signupUsername').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+
+            try {
+                const response = await fetch('/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, email, password }),
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    // Show the Success Popup
+                    showPopup(result.message || "Sign Up Successful!");
+                } else {
+                    alert(result.message || "Error signing up. Please try again.");
+                }
+            } catch (error) {
+                console.error(error);
+                alert('Error signing up. Please try again.');
+            }
+        });
+
+        // Show Success Popup
+        function showPopup(message) {
+            const popup = document.getElementById("successPopup");
+            const popupMessage = popup.querySelector('h2');
+            popupMessage.textContent = message; // Set dynamic message
+            popup.style.display = 'flex';
+        }
+
+        // Close Success Popup
+        function closePopup() {
+            const popup = document.getElementById("successPopup");
+            popup.style.display = 'none';
+        }
+
+        // Handle Login Form Submission
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+
+    // Get email and password from the form
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    try {
+        // Send login request to the server
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            // If login is successful, redirect to dashboard
+            alert('Login successful!');
+            window.location.href = result.redirectTo; // This will redirect to /dashboard page
+        } else {
+            // If login failed, show an error message
+            alert(result.message);
+        }
+    } catch (error) {
+        console.error(error);
+        alert('Error logging in. Please try again.');
+    }
+});
+
+
+    </script>
+</body>
+</html>

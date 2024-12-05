@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni Appointment Booking</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link href="./sched.css" rel="stylesheet" />
+</head>
+<body>
+  <nav>
+      <img class="logo" src="./REC_onnect-removebg-preview.png" height="30px"/>
+      <h3><a href="/Pges/6.alumni profile/alum-prof.html">BACK</a></h3>
+  </nav>
+
+<div class="container">
+  <div class="profile-card">
+    <img src="OIP.jpg" alt="Profile Picture" height="90px" class="profile-pic">
+    <h1>Anitha S</h1>
+    <p class="description">I am a UG graduate of Computer Science and Business Systems from Rajalakshmi Engineering College with experience in Automation, MERN, and Cyber Security helping people find the right career paths.</p>
+    <button class="port">Portfolio</button>
+ </div>
+  <div class="session">
+    <h2>Schedule your <span>session </span>with </h2>
+    <h1>Ms. Anitha S</h1>
+    <!-- Date Picker for selecting date -->
+    <input type="text" id="meeting-date" placeholder="Pick a date" readonly>
+    <!-- Time Slots Section -->
+    <div class="time-slots" id="time-slots">
+      
+      <!-- Available times will be displayed here dynamically -->
+    </div>
+    <button class="continue-button" id="continue-button">Continue</button>
+</div>
+
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="./sched.js"></script>
+
+</body>
+</html>
+

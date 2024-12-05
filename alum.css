@@ -1,0 +1,163 @@
+*{
+    text-decoration: none;
+  
+}
+
+.video-call-btn {
+    padding: 10px 20px;
+    background-color: #f1c720;  /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;  /* Smooth color change effect */
+}
+
+.video-call-btn:hover {
+    background-color: #f1c720;  /* Darker green when hovered */
+}
+
+
+.navbar{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 9%;
+    padding: 0%;
+    justify-content: space-around;
+}
+.logo{
+    margin-top: 20px;
+}
+li{
+    list-style: none;
+    display: inline;
+    margin-top: 20px;
+    
+}
+li a{
+    color: #ddd;
+    font-size: 16px;
+    margin-right: 25px;
+}
+li a:hover{
+    color: #f1c720;
+}
+body {
+    background:url("./rec.png");
+    font-family:"montserrat";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+     
+}
+
+
+.profile-section {
+    display: flex;
+        /* Centers vertically */
+    justify-content: flex-start; /* Aligns content to the left */
+           /* Full viewport height */
+    padding-left: 10%;  
+    gap: 10%;    
+   color: #0b0b0b;  
+   margin-top: 0%;
+}
+
+.profile-card {
+    margin: 0%;
+    padding: 0%;
+    border: 0cap;
+    color: #e4dd0b;
+    width: 40%;
+    text-align: center;
+    
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    margin-top: 0%;
+    border-radius: 100%;
+}
+
+.description {
+    font-size: 18px;
+    margin-left: 15px;
+    text-align: left;
+    color: #ddd;
+}
+
+.options-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 400px;
+    margin-top: 70px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 10px;
+    border: 1px solid #f1c720;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+.filter-btn.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.booking-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    position: relative;
+    
+}
+
+
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.card p .icon {
+    margin-right: 5px;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

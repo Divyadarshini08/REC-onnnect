@@ -1,0 +1,168 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./rec.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+nav{
+   /* Dark backgr
+   ound for navbar */
+  display: flex;
+  overflow: hidden; /* Ensure content doesn't overflow */
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Position it at the top */
+  width: 100%; /* Make navbar take full width */
+  z-index:  1000;
+  height: 60px;
+ 
+  justify-content: space-around;
+}
+.logo{
+  margin-top: 20px;
+}
+p{
+  margin: 10px;
+}
+h2 {
+  margin-bottom: 15px;
+}
+h3{
+  margin-top: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 1;
+}
+span {
+  color: #f1c720;
+}
+a{
+  text-decoration: none;
+  color: #e0e0e0;
+}
+a:hover{
+  color: #d8b100;
+}
+.container {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: left;
+  width: 80%; /* Adjust container width as per your design */
+  max-width: 1200px; /* To prevent container from getting too wide */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-card, .session { /* Each section takes up 45% of the container width */
+  width: 40%;
+  padding: 20px;
+
+  border-radius: 10px;
+  
+}
+.session{
+
+  box-shadow: 0px 0px 15px rgba(213, 202, 202, 0.2);
+  margin-right: 130px;
+}
+.profile-card {
+ margin-left: 150px;
+ text-align: left;
+}
+.profile-card h1{
+  margin-left: 10px;
+  color: #d8b100;
+}
+.profile-card button{
+  margin-left: 34%;
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 40px;
+  width: 80px;
+}
+
+.profile-card img {
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-left: 20%;
+}
+
+
+#meeting-date {
+  font-size: medium;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background: #f9f9f9;
+  border: none;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.time-slot {
+  margin-top: 10px;
+  padding: 12px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.time-slot:hover {
+  background-color: #f1c720;
+  transform: scale(1.05);
+}
+
+.time-slot.active {
+  background-color: #f1c720;
+  color: white;
+  transform: scale(1.1);
+}
+
+.continue-button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  font-size: medium;
+  background: #f1c720;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+  background: #d8b100;
+}
+
+@media (max-width: 768px) {
+  /* Stack the profile card and session vertically on smaller screens */
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .profile-card, .session {
+    width: 100%;
+    margin-bottom: 20px; /* Space between profile and session */
+  }
+}

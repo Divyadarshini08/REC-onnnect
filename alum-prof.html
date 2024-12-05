@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Layout</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="./alum.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                
+                <ul class="navbar">
+                    <img class="logo" src="./REC_onnect-removebg-preview.png" height="30px"/>
+                    
+                   
+                    <li class="nav-item"><a class="nav-link" href="/Pges/5.Dashboard/dash.html">Dashboard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-card">
+                <img src="OIP.jpg" alt="Profile Picture" height="90px" class="profile-pic">
+                <h1>Anitha S</h1>
+                <p class="description">I am a UG graduate of Computer Science and Business Systems from Rajalakshmi Engineering College with experience in Automation, MERN, and Cyber Security helping people find the right career paths.</p>
+                <button class="port">Portfolio</button>
+            </div>
+            <div class="options-section">
+                <div class="filter-buttons">
+                    <button onclick="filterCards('all')" class="filter-btn active">All</button>
+                    <button onclick="filterCards('call')" class="filter-btn">1:1 Call</button>
+                    <button onclick="filterCards('dm')" class="filter-btn">Priority DM</button>
+                </div>
+                <div class="booking-options">
+                    <div class="card" data-type="call">
+                        <a href="sched.html" class="button-link">
+                            <button class="video-call-btn">30 mins video call</button>
+                        </a>
+                        <p><span class="icon">📅</span> 30 mins - Video Meeting</p>
+                    </div>
+                    <div class="card" data-type="dm">
+                        <h2>Have a question?</h2>
+                        <p><span class="icon">✉️</span> Replies in 3 days - Priority DM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./alum.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const videoCallButton = document.querySelector('.video-call-btn');
+           
+            if (videoCallButton) {
+                videoCallButton.addEventListener('click', function() {
+                    // Redirect to the /sched page
+                    window.location.href = '/sched'; // This will redirect to sched.html
+                });
+            }
+        });
+      </script>
+</body>
+</html>
